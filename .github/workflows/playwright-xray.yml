@@ -49,43 +49,4 @@ jobs:
           path: results/xray-report.xml
           if-no-files-found: warn
           retention-days: 30
-
-      - name: Import JUnit to Xray Cloud
-        if: ${{ always() }}
-        env:
-          XRAY_CLIENT_ID: ${{ secrets.XRAY_CLIENT_ID }}
-          XRAY_CLIENT_SECRET: ${{ secrets.XRAY_CLIENT_SECRET }}
-        run: |
-          set -euo pipefail
-
-          if [ ! -f results/xray-report.xml ]; then
-            echo "JUnit XML file not found at results/xray-report.xml"
-            exit 1
-          fi
-
-          RESPONSE=$(curl -sS -w '\n%{http_code}' \
-            -u "${XRAY_CLIENT_ID}:${XRAY_CLIENT_SECRET}" \
-            -F "projectKey=ILABACCEL" \
-            -F "testPlanKey=ILABACCEL-1543" \
-            -F "file=@results/xray-report.xml" \
-            "https://xray.cloud.getxray.app/api/v2/import/execution/junit")
-
-          HTTP_CODE=$(printf '%s' "$RESPONSE" | tail -n 1)
-          BODY=$(printf '%s' "$RESPONSE" | sed '$d')
-
-          echo "Xray response:" 
-          echo "$BODY"
-          echo "HTTP status: $HTTP_CODE"
-
-          if [ "$HTTP_CODE" != "200" ] && [ "$HTTP_CODE" != "201" ]; then
-            echo "Xray import was rejected."
-            exit 1
-          fi
-
-          IMPORT_KEY=$(printf '%s' "$BODY" | jq -r '.key // .testExecIssue.key // .testExecutionKey // empty' 2>/dev/null || true)
-          if [ -z "$IMPORT_KEY" ] || [ "$IMPORT_KEY" = "empty" ] || [ "$IMPORT_KEY" = "null" ]; then
-            echo "Xray import succeeded but no test execution key was returned."
-            exit 1
-          fi
-
-          echo "Imported as Test Execution: $IMPORT_KEY"
+          
