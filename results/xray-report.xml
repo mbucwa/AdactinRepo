@@ -1,0 +1,128 @@
+<testsuites id="" name="" tests="21" failures="0" skipped="21" errors="0" time="0.04403599999999994">
+<testsuite name="[ILABACCEL-1521] Successful login with valid username and password.spec.ts" timestamp="2026-10-08T12:40:18.939Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="ILABACCEL-1527 › [ILABACCEL-1521] Successful login with valid username and password" classname="[ILABACCEL-1521] Successful login with valid username and password.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="[ILABACCEL-1522] Login attempt with invalid username.spec.ts" timestamp="2026-10-08T12:40:18.939Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="ILABACCEL-1527 › [ILABACCEL-1522] Login attempt with invalid username" classname="[ILABACCEL-1522] Login attempt with invalid username.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="[ILABACCEL-1523] Login attempt with invalid password.spec.ts" timestamp="2026-10-08T12:40:18.939Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="ILABACCEL-1527 › [ILABACCEL-1523] Login attempt with invalid password" classname="[ILABACCEL-1523] Login attempt with invalid password.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="[ILABACCEL-1524] Login attempt with empty username and or password fields.spec.ts" timestamp="2026-10-08T12:40:18.939Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="ILABACCEL-1527 › [ILABACCEL-1524] Login attempt with empty username and or password fields" classname="[ILABACCEL-1524] Login attempt with empty username and or password fields.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="[ILABACCEL-1525] User lands on correct dashboard after successful login.spec.ts" timestamp="2026-10-08T12:40:18.939Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="ILABACCEL-1527 › [ILABACCEL-1525] User lands on correct dashboard after successful login" classname="[ILABACCEL-1525] User lands on correct dashboard after successful login.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="[ILABACCEL-1526] Appropriate error message displayed on failed login.spec.ts" timestamp="2026-10-08T12:40:18.939Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="ILABACCEL-1527 › [ILABACCEL-1526] Appropriate error message displayed on failed login" classname="[ILABACCEL-1526] Appropriate error message displayed on failed login.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="seed.spec.ts" timestamp="2026-10-08T12:40:18.939Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Test group › seed" classname="seed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="[ILABACCEL-1521] Successful login with valid username and password.spec.ts" timestamp="2026-10-08T12:40:18.939Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="ILABACCEL-1527 › [ILABACCEL-1521] Successful login with valid username and password" classname="[ILABACCEL-1521] Successful login with valid username and password.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="[ILABACCEL-1522] Login attempt with invalid username.spec.ts" timestamp="2026-10-08T12:40:18.939Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="ILABACCEL-1527 › [ILABACCEL-1522] Login attempt with invalid username" classname="[ILABACCEL-1522] Login attempt with invalid username.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="[ILABACCEL-1523] Login attempt with invalid password.spec.ts" timestamp="2026-10-08T12:40:18.939Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="ILABACCEL-1527 › [ILABACCEL-1523] Login attempt with invalid password" classname="[ILABACCEL-1523] Login attempt with invalid password.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="[ILABACCEL-1524] Login attempt with empty username and or password fields.spec.ts" timestamp="2026-10-08T12:40:18.939Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="ILABACCEL-1527 › [ILABACCEL-1524] Login attempt with empty username and or password fields" classname="[ILABACCEL-1524] Login attempt with empty username and or password fields.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="[ILABACCEL-1525] User lands on correct dashboard after successful login.spec.ts" timestamp="2026-10-08T12:40:18.939Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="ILABACCEL-1527 › [ILABACCEL-1525] User lands on correct dashboard after successful login" classname="[ILABACCEL-1525] User lands on correct dashboard after successful login.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="[ILABACCEL-1526] Appropriate error message displayed on failed login.spec.ts" timestamp="2026-10-08T12:40:18.939Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="ILABACCEL-1527 › [ILABACCEL-1526] Appropriate error message displayed on failed login" classname="[ILABACCEL-1526] Appropriate error message displayed on failed login.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="seed.spec.ts" timestamp="2026-10-08T12:40:18.939Z" hostname="firefox" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Test group › seed" classname="seed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="[ILABACCEL-1521] Successful login with valid username and password.spec.ts" timestamp="2026-10-08T12:40:18.939Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="ILABACCEL-1527 › [ILABACCEL-1521] Successful login with valid username and password" classname="[ILABACCEL-1521] Successful login with valid username and password.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="[ILABACCEL-1522] Login attempt with invalid username.spec.ts" timestamp="2026-10-08T12:40:18.939Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="ILABACCEL-1527 › [ILABACCEL-1522] Login attempt with invalid username" classname="[ILABACCEL-1522] Login attempt with invalid username.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="[ILABACCEL-1523] Login attempt with invalid password.spec.ts" timestamp="2026-10-08T12:40:18.939Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="ILABACCEL-1527 › [ILABACCEL-1523] Login attempt with invalid password" classname="[ILABACCEL-1523] Login attempt with invalid password.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="[ILABACCEL-1524] Login attempt with empty username and or password fields.spec.ts" timestamp="2026-10-08T12:40:18.939Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="ILABACCEL-1527 › [ILABACCEL-1524] Login attempt with empty username and or password fields" classname="[ILABACCEL-1524] Login attempt with empty username and or password fields.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="[ILABACCEL-1525] User lands on correct dashboard after successful login.spec.ts" timestamp="2026-10-08T12:40:18.939Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="ILABACCEL-1527 › [ILABACCEL-1525] User lands on correct dashboard after successful login" classname="[ILABACCEL-1525] User lands on correct dashboard after successful login.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="[ILABACCEL-1526] Appropriate error message displayed on failed login.spec.ts" timestamp="2026-10-08T12:40:18.939Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="ILABACCEL-1527 › [ILABACCEL-1526] Appropriate error message displayed on failed login" classname="[ILABACCEL-1526] Appropriate error message displayed on failed login.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="seed.spec.ts" timestamp="2026-10-08T12:40:18.939Z" hostname="webkit" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Test group › seed" classname="seed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+</testsuites>
