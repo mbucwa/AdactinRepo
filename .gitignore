@@ -5,6 +5,7 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+results/
 
 # Environment and secrets
 .env
@@ -18,3 +19,6 @@ node_modules/
 *.pfx
 *credentials*
 **/credentials/**
+
+# Local editor/system noise
+.DS_Store

@@ -1,0 +1,91 @@
+name: Playwright Xray Integration
+
+on:
+  workflow_dispatch:
+
+jobs:
+  playwright:
+    name: Playwright suite + Xray sync
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: read
+    env:
+      CI: true
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Run Playwright tests
+        run: npx playwright test
+
+      - name: Upload HTML report artifact
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-html-report
+          path: playwright-report/
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Upload JUnit report artifact
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: xray-junit-report
+          path: results/xray-report.xml
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Import JUnit to Xray Cloud
+        if: ${{ always() }}
+        env:
+          XRAY_CLIENT_ID: ${{ secrets.XRAY_CLIENT_ID }}
+          XRAY_CLIENT_SECRET: ${{ secrets.XRAY_CLIENT_SECRET }}
+        run: |
+          set -euo pipefail
+
+          if [ ! -f results/xray-report.xml ]; then
+            echo "JUnit XML file not found at results/xray-report.xml"
+            exit 1
+          fi
+
+          RESPONSE=$(curl -sS -w '\n%{http_code}' \
+            -u "${XRAY_CLIENT_ID}:${XRAY_CLIENT_SECRET}" \
+            -F "projectKey=ILABACCEL" \
+            -F "testPlanKey=ILABACCEL-1543" \
+            -F "file=@results/xray-report.xml" \
+            "https://xray.cloud.getxray.app/api/v2/import/execution/junit")
+
+          HTTP_CODE=$(printf '%s' "$RESPONSE" | tail -n 1)
+          BODY=$(printf '%s' "$RESPONSE" | sed '$d')
+
+          echo "Xray response:" 
+          echo "$BODY"
+          echo "HTTP status: $HTTP_CODE"
+
+          if [ "$HTTP_CODE" != "200" ] && [ "$HTTP_CODE" != "201" ]; then
+            echo "Xray import was rejected."
+            exit 1
+          fi
+
+          IMPORT_KEY=$(printf '%s' "$BODY" | jq -r '.key // .testExecIssue.key // .testExecutionKey // empty' 2>/dev/null || true)
+          if [ -z "$IMPORT_KEY" ] || [ "$IMPORT_KEY" = "empty" ] || [ "$IMPORT_KEY" = "null" ]; then
+            echo "Xray import succeeded but no test execution key was returned."
+            exit 1
+          fi
+
+          echo "Imported as Test Execution: $IMPORT_KEY"
