@@ -10,7 +10,9 @@ results/
 # Environment and secrets
 .env
 .env.*
-*.env
+**/.env
+**/.env.*
+**/*.env
 *.pem
 *.key
 *.crt
