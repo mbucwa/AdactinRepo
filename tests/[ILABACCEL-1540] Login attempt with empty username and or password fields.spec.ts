@@ -1,7 +1,7 @@
 import { test } from '@playwright/test';
 import { LoginPage } from './pages/login-page';
 
-test.describe('ILABACCEL-1543', () => {
+test.describe('ILABACCEL-1545', () => {
   test('[ILABACCEL-1540] Verify login attempt with empty username and or password fields', async ({ page }) => {
     test.info().annotations.push({ type: 'test_key', description: 'ILABACCEL-1540' });
     const loginPage = new LoginPage(page);

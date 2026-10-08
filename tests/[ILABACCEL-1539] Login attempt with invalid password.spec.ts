@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 import { LoginPage } from './pages/login-page';
 
-test.describe('ILABACCEL-1543', () => {
+test.describe('ILABACCEL-1545', () => {
   test('[ILABACCEL-1539] Verify login attempt with invalid password is rejected', async ({ page }) => {
     test.info().annotations.push({ type: 'test_key', description: 'ILABACCEL-1539' });
     const loginPage = new LoginPage(page);
