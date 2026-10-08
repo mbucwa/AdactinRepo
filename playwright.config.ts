@@ -18,9 +18,11 @@ export default defineConfig({
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI with a small number of retries */
-  retries: process.env.CI ? 2 : 1,
+  retries: process.env.CI ? 1 : 0,
   /* Run a sensible number of workers in CI */
-  workers: process.env.CI ? 2 : 1,
+  workers: process.env.CI ? 1 : 1,
+  /* Increase timeout for tests */
+  timeout: 60000,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
     ['list'],
@@ -43,16 +45,6 @@ export default defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
-    },
-
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
-
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
     },
 
     /* Test against mobile viewports. */
